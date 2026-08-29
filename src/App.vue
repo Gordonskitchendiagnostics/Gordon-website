@@ -1,49 +1,19 @@
 <script setup>
-const heroImage = 'https://images.unsplash.com/photo-1784039534969-26e424548f3e?auto=format&fit=crop&fm=jpg&q=82&w=2200'
+import heroImage from './assets/hero-commercial.svg'
+import fryerImage from './assets/service-fryers.svg'
+import grillImage from './assets/service-grills.svg'
+import holdingImage from './assets/service-holding.svg'
+import riceImage from './assets/service-rice.svg'
+import beverageImage from './assets/service-beverage.svg'
+import facilityImage from './assets/service-facility.svg'
 
 const services = [
-  {
-    icon: '♨',
-    title: 'Fryers',
-    text: 'Diagnostics, repairs, controls, filtration, and performance restoration.',
-    image: 'https://images.unsplash.com/photo-1766232314942-ed2824cdb907?auto=format&fit=crop&fm=jpg&q=76&w=1200',
-    position: 'center 58%',
-  },
-  {
-    icon: '≋',
-    title: 'Grills & Griddles',
-    text: 'Flat tops, clamshell grills, charbroilers, controls, and cooking systems.',
-    image: 'https://images.unsplash.com/photo-1765448856945-481569592cf3?auto=format&fit=crop&fm=jpg&q=76&w=1200',
-    position: 'center 55%',
-  },
-  {
-    icon: '⌁',
-    title: 'Holding Equipment',
-    text: 'Warmers, holding cabinets, heat lamps, and temperature-control equipment.',
-    image: 'https://images.unsplash.com/photo-1782750161991-23529c9462bb?auto=format&fit=crop&fm=jpg&q=76&w=1200',
-    position: 'center 52%',
-  },
-  {
-    icon: '◒',
-    title: 'Rice Cookers',
-    text: 'Repair and maintenance for dependable, consistent performance.',
-    image: 'https://images.unsplash.com/photo-1774101200315-8ac504fa0fd4?auto=format&fit=crop&fm=jpg&q=76&w=1200',
-    position: 'center 58%',
-  },
-  {
-    icon: '◉',
-    title: 'Beverage Equipment',
-    text: 'Bunn equipment, dispensers, brewers, and related commercial systems.',
-    image: 'https://images.unsplash.com/photo-1760001553414-5634201efc36?auto=format&fit=crop&fm=jpg&q=76&w=1200',
-    position: 'center 50%',
-  },
-  {
-    icon: '⚙',
-    title: 'Facility Services',
-    text: 'Preventive maintenance, repairs, troubleshooting, and general facility support.',
-    image: 'https://images.unsplash.com/photo-1778792447408-b22ad88daa37?auto=format&fit=crop&fm=jpg&q=76&w=1200',
-    position: 'center 50%',
-  },
+  { icon: '♨', title: 'Fryers', text: 'Diagnostics, repairs, controls, filtration, and performance restoration.', image: fryerImage, position: 'center 55%' },
+  { icon: '≋', title: 'Grills & Griddles', text: 'Flat tops, clamshell grills, charbroilers, controls, and cooking systems.', image: grillImage, position: 'center 55%' },
+  { icon: '⌁', title: 'Holding Equipment', text: 'Warmers, holding cabinets, heat lamps, and temperature-control equipment.', image: holdingImage, position: 'center 50%' },
+  { icon: '◒', title: 'Rice Cookers', text: 'Repair and maintenance for dependable, consistent performance.', image: riceImage, position: 'center 55%' },
+  { icon: '◉', title: 'Beverage Equipment', text: 'Bunn equipment, dispensers, brewers, and related commercial systems.', image: beverageImage, position: 'center 50%' },
+  { icon: '⚙', title: 'Facility Services', text: 'Preventive maintenance, repairs, troubleshooting, and general facility support.', image: facilityImage, position: 'center 50%' },
 ]
 
 const benefits = [
@@ -84,9 +54,7 @@ const benefits = [
         <div class="hero-content">
           <p class="eyebrow">Commercial kitchen equipment service • Iowa</p>
           <h1>Keeping your kitchen running.<br /><span>So you can keep going.</span></h1>
-          <p class="hero-copy">
-            Fast diagnostics. Honest repairs. Quality service you can count on for the commercial kitchen equipment your business relies on every day.
-          </p>
+          <p class="hero-copy">Fast diagnostics. Honest repairs. Quality service you can count on for the commercial kitchen equipment your business relies on every day.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#contact">Request Service</a>
             <a id="portal" class="button button-outline" href="#contact">Customer Portal</a>
@@ -97,10 +65,7 @@ const benefits = [
       <section class="benefits-section" aria-label="Why choose Gordon's">
         <article v-for="benefit in benefits" :key="benefit.title" class="benefit">
           <div class="benefit-icon">{{ benefit.icon }}</div>
-          <div>
-            <h3>{{ benefit.title }}</h3>
-            <p>{{ benefit.text }}</p>
-          </div>
+          <div><h3>{{ benefit.title }}</h3><p>{{ benefit.text }}</p></div>
         </article>
       </section>
 
@@ -113,19 +78,10 @@ const benefits = [
 
         <div class="service-grid">
           <article v-for="service in services" :key="service.title" class="service-card">
-            <div
-              class="service-photo"
-              :style="{
-                backgroundImage: `linear-gradient(180deg, rgba(4,24,48,.03), rgba(3,20,39,.62)), url(${service.image})`,
-                backgroundPosition: service.position,
-              }"
-            >
+            <div class="service-photo" :style="{ backgroundImage: `linear-gradient(180deg, rgba(4,24,48,.03), rgba(3,20,39,.62)), url(${service.image})`, backgroundPosition: service.position }">
               <div class="service-icon">{{ service.icon }}</div>
             </div>
-            <div class="service-content">
-              <h3>{{ service.title }}</h3>
-              <p>{{ service.text }}</p>
-            </div>
+            <div class="service-content"><h3>{{ service.title }}</h3><p>{{ service.text }}</p></div>
           </article>
         </div>
       </section>
@@ -136,9 +92,7 @@ const benefits = [
           <div>
             <p class="eyebrow">The Gordon's standard</p>
             <h2>Built on hard work & dedication</h2>
-            <p>
-              Gordon's Kitchen Diagnostics is named in honor of my grandfather, Gordon, who grew the most amazing flowers through patience, hard work, and dedication. Those are the same values we bring to every job.
-            </p>
+            <p>Gordon's Kitchen Diagnostics is named in honor of my grandfather, Gordon, who grew the most amazing flowers through patience, hard work, and dedication. Those are the same values we bring to every job.</p>
             <strong>We don't just fix equipment — we help keep your business moving.</strong>
           </div>
         </div>
@@ -156,13 +110,7 @@ const benefits = [
     </main>
 
     <footer id="contact" class="contact-bar">
-      <div class="contact-lead">
-        <span class="phone-icon">☎</span>
-        <div>
-          <small>Need service today?</small>
-          <strong>We're ready to help.</strong>
-        </div>
-      </div>
+      <div class="contact-lead"><span class="phone-icon">☎</span><div><small>Need service today?</small><strong>We're ready to help.</strong></div></div>
       <a href="tel:+15152904476">(515) 290-4476</a>
       <a href="mailto:brian@gcssofiowa.com">brian@gcssofiowa.com</a>
       <span>Serving customers across Iowa</span>
