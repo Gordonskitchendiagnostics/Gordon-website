@@ -1,15 +1,15 @@
 <script setup>
 const services = [
-  { icon: '🍟', title: 'Fryers', text: 'Diagnostics, repairs, controls, filtration, and performance restoration.' },
-  { icon: '♨️', title: 'Grills & Griddles', text: 'Flat tops, clamshell grills, charbroilers, controls, and cooking systems.' },
-  { icon: '🌡️', title: 'Holding Equipment', text: 'Warmers, holding cabinets, heat lamps, and temperature-control equipment.' },
-  { icon: '🍚', title: 'Rice Cookers', text: 'Repair and maintenance for dependable, consistent performance.' },
-  { icon: '🥤', title: 'Beverage Equipment', text: 'Bunn equipment, dispensers, brewers, and related commercial systems.' },
-  { icon: '🛠️', title: 'Facility Services', text: 'Preventive maintenance, repairs, troubleshooting, and general facility support.' },
+  { icon: '♨', title: 'Fryers', text: 'Diagnostics, repairs, controls, filtration, and performance restoration.', position: '18% 58%' },
+  { icon: '≋', title: 'Grills & Griddles', text: 'Flat tops, clamshell grills, charbroilers, controls, and cooking systems.', position: '42% 55%' },
+  { icon: '⌁', title: 'Holding Equipment', text: 'Warmers, holding cabinets, heat lamps, and temperature-control equipment.', position: '64% 48%' },
+  { icon: '◒', title: 'Rice Cookers', text: 'Repair and maintenance for dependable, consistent performance.', position: '72% 66%' },
+  { icon: '◉', title: 'Beverage Equipment', text: 'Bunn equipment, dispensers, brewers, and related commercial systems.', position: '34% 72%' },
+  { icon: '⚙', title: 'Facility Services', text: 'Preventive maintenance, repairs, troubleshooting, and general facility support.', position: '88% 54%' },
 ]
 
 const benefits = [
-  { icon: '◴', title: 'Fast Response', text: 'Quick turnaround to reduce downtime and keep your operation moving.' },
+  { icon: '◴', title: 'Fast Response', text: 'Quick turnaround to minimize downtime and keep your business moving.' },
   { icon: '✓', title: 'Expert Diagnostics', text: 'Experienced troubleshooting focused on finding the actual cause.' },
   { icon: '⚙', title: 'Quality Parts', text: 'Reliable parts and proven repair solutions for long-lasting performance.' },
   { icon: '◇', title: 'Honest Service', text: 'Straightforward answers, clear communication, and fair recommendations.' },
@@ -20,7 +20,7 @@ const benefits = [
   <div class="site-shell">
     <header class="topbar">
       <a class="brand" href="#home" aria-label="Gordon's Kitchen Diagnostics home">
-        <div class="brand-mark">G</div>
+        <div class="brand-mark"><span>G</span></div>
         <div class="brand-copy">
           <strong>GORDON'S</strong>
           <span>KITCHEN DIAGNOSTICS</span>
@@ -41,7 +41,8 @@ const benefits = [
 
     <main>
       <section id="home" class="hero-section">
-        <div class="hero-grid-overlay"></div>
+        <div class="hero-photo" aria-hidden="true"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
         <div class="hero-content">
           <p class="eyebrow">Commercial kitchen equipment service • Iowa</p>
           <h1>Keeping your kitchen running.<br /><span>So you can keep going.</span></h1>
@@ -52,15 +53,6 @@ const benefits = [
             <a class="button button-primary" href="#contact">Request Service</a>
             <a id="portal" class="button button-outline" href="#contact">Customer Portal</a>
           </div>
-        </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <div class="equipment equipment-one"></div>
-          <div class="equipment equipment-two"></div>
-          <div class="equipment equipment-three"></div>
-          <div class="equipment equipment-four"></div>
-          <div class="steel-line line-one"></div>
-          <div class="steel-line line-two"></div>
         </div>
       </section>
 
@@ -83,7 +75,7 @@ const benefits = [
 
         <div class="service-grid">
           <article v-for="service in services" :key="service.title" class="service-card">
-            <div class="service-photo">
+            <div class="service-photo" :style="{ '--card-position': service.position }">
               <div class="service-icon">{{ service.icon }}</div>
             </div>
             <div class="service-content">
@@ -96,7 +88,7 @@ const benefits = [
 
       <section class="story-area">
         <div id="about" class="story-panel">
-          <div class="flower-mark">✿</div>
+          <div class="flower-art" aria-hidden="true">✿</div>
           <div>
             <p class="eyebrow">The Gordon's standard</p>
             <h2>Built on hard work & dedication</h2>
@@ -123,7 +115,7 @@ const benefits = [
       <div class="contact-lead">
         <span class="phone-icon">☎</span>
         <div>
-          <small>Need service?</small>
+          <small>Need service today?</small>
           <strong>We're ready to help.</strong>
         </div>
       </div>
