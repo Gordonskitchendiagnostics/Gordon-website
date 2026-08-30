@@ -34,8 +34,8 @@ const benefits = [
       <a class="brand" href="#home" aria-label="Gordon's Kitchen Diagnostics home">
         <img
           :src="gordonsLogo"
-          alt="Gordon's Kitchen Diagnostics"
-          style="width:68px;height:68px;object-fit:cover;border-radius:50%;background:#fff;box-shadow:0 0 24px rgba(22,136,255,.28)"
+          alt="Gordon's Kitchen Diagnostics logo"
+          style="width:82px;height:82px;object-fit:contain;border-radius:10px;background:#fff;padding:3px;box-shadow:0 0 24px rgba(22,136,255,.28)"
         />
         <div class="brand-copy"><strong>GORDON'S</strong><span>KITCHEN DIAGNOSTICS</span></div>
       </a>
