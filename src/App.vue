@@ -1,5 +1,5 @@
 <script setup>
-import heroImage from './assets/hero-commercial.svg'
+import heroImage from './assets/service-grills.svg'
 import fryerImage from './assets/service-grills.svg'
 import grillImage from './assets/service-grills.svg'
 import holdingImage from './assets/service-holding.svg'
