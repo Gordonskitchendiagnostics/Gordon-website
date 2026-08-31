@@ -8,7 +8,7 @@ import beverageImage from './assets/service-facility.svg'
 import facilityImage from './assets/service-facility.svg'
 import gordonsLogo from './assets/gordons-logo.jpg'
 
-const portalUrl = 'https://app.gordonsservice.com/portal'
+const portalUrl = 'https://portal.gordonsservice.com/portal'
 const facebookUrl = 'https://www.facebook.com/share/19SqDJ3idv/?mibextid=wwXIfr'
 
 const services = [
