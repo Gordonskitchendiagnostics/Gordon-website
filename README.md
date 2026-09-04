@@ -1,3 +1,3 @@
 # Gordon's Kitchen Diagnostics Website
 
-Commercial kitchen equipment service website for Gordon's Kitchen Diagnostics.
+Public website for Gordon's Kitchen Diagnostics.
